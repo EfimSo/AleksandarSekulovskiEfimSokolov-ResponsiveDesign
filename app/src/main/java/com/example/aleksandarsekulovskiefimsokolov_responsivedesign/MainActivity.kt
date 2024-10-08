@@ -95,7 +95,6 @@ fun MainContent(
                     .background(MaterialTheme.colorScheme.primary)
             )
             Divider(color = Color.Gray, modifier = Modifier.width(1.dp))
-            // Content area
             BoxWithConstraints(modifier = Modifier.weight(1f)) {
                 when (currentScreen) {
                     Screen.HOME -> {
@@ -175,7 +174,6 @@ fun HomeContent(isWideScreen: Boolean, modifier: Modifier = Modifier) {
 @Composable
 fun ProfileContent(isWideScreen: Boolean, maxWidth: Dp, modifier: Modifier = Modifier) {
     if (isWideScreen) {
-        // Use BoxWithConstraints to adjust layout based on available width
         Box(modifier = modifier.fillMaxSize()) {
             val halfWidth = maxWidth / 2
             Row(modifier = Modifier.fillMaxSize()) {
